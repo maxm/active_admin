@@ -4,7 +4,7 @@ module ActiveAdmin
       class Edit < Base
 
         def title
-          "Edit #{active_admin_config.resource_name}"
+          t 'admin.edit.title', :name => active_admin_config.resource_name
         end
 
         def main_content

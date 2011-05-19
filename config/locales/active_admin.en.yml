@@ -1,0 +1,16 @@
+en:
+  admin:
+    base:
+      main_content: Please implement %{name}#main_content to display content.
+      footer: Powered by %{link} %{version}
+    new:
+      title: New %{name}
+    dashboard:
+      title: Dashboard
+      rendering_sections: Rendering sections
+      welcome: "Welcome to Active Admin. This is the default dashboard page. To add dashboard sections, checkout 'app/admin/dashboards.rb'"
+    edit:
+      title: Edit %{name}
+    show:
+      details_title: %{name} Details
+

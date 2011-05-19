@@ -97,7 +97,7 @@ module ActiveAdmin
         end
 
         def main_content
-          "Please implement #{self.class.name}#main_content to display content.".html_safe
+          (t "admin.base.main_content", :name => self.class.name).html_safe
         end
 
         def title
@@ -127,7 +127,7 @@ module ActiveAdmin
         # Renders the content for the footer
         def build_footer
           div :id => "footer" do
-            para "Powered by #{link_to("Active Admin", "http://www.activeadmin.info")} #{ActiveAdmin::VERSION}".html_safe
+            para((t "admin.base.footer", :link => link_to("Active Admin", "http://www.activeadmin.info"), :version => ActiveAdmin::VERSION).html_safe)
           end
         end
 

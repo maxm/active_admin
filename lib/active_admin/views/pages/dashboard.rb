@@ -17,11 +17,11 @@ module ActiveAdmin
         def build_sidebar; end
 
         def title
-          "Dashboard"
+          t "admin.dashboard.title"
         end
 
         def render_sections(sections)
-          p "Rendering sections"
+          p t("admin.dashboard.rendering_sections")
           p sections.count
           table :class => "dashboard" do
             sections.in_groups_of(3, false).each do |row|
@@ -51,7 +51,7 @@ module ActiveAdmin
 
         def default_welcome_section
           para :id => "dashboard_default_message" do
-            "Welcome to Active Admin. This is the default dashboard page. To add dashboard sections, checkout 'app/admin/dashboards.rb'"
+            t 'admin.dashboard.welcome'
           end
         end
 

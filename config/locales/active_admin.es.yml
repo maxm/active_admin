@@ -1,0 +1,18 @@
+es:
+  admin:
+    base:
+      main_content: Por favor implemente %{name}#main_content para mostrar contenido.
+      footer: Desarrollado con %{link} %{version}
+    new:
+      title: Nuevo %{name}
+    dashboard:
+      title: Panel
+      rendering_sections: Presentando secciones
+      welcome: "Bienvenido a Active Admin. Este es la página de panel predeterminada. Para agregar secciones edita 'app/admin/dashboards.rb'"
+    edit:
+      title: Editar %{name}
+    show:
+      details_title: Detalles de %{name}
+    devise:
+      login_title: Ingreso %{name}
+

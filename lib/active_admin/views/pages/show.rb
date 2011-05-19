@@ -28,7 +28,7 @@ module ActiveAdmin
         end
 
         def attributes_table(*args, &block)
-          panel(active_admin_config.resource_name + " Details") do
+          panel(t('admin.show.details_title', :name => active_admin_config.resource_name)) do
             attributes_table_for resource, *args, &block
           end
         end
