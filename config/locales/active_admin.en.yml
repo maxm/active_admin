@@ -13,4 +13,6 @@ en:
       title: Edit %{name}
     show:
       details_title: %{name} Details
+    devise:
+      login_title: %{name} Login
 
