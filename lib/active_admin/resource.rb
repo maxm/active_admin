@@ -74,7 +74,7 @@ module ActiveAdmin
 
     # Returns the name to call this resource
     def resource_name
-      @resource_name ||= underscored_resource_name.titleize
+      @resource_name ||= resource.model_name.human
     end
 
     # Returns the plural version of this resource
