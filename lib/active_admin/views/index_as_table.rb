@@ -35,9 +35,9 @@ module ActiveAdmin
             :name => ""
           }.merge(options)
           column options[:name] do |resource|
-            links = link_to "View", resource_path(resource), :class => "view_link"
-            links += link_to "Edit", edit_resource_path(resource), :class => "edit_link"
-            links += link_to "Delete", resource_path(resource), :method => :delete, :confirm => "Are you sure you want to delete this?", :class => "delete_link"
+            links = link_to t('admin.table.actions.view'), resource_path(resource), :class => "view_link"
+            links += link_to t('admin.table.actions.edit'), edit_resource_path(resource), :class => "edit_link"
+            links += link_to t('admin.table.actions.delete'), resource_path(resource), :method => :delete, :confirm => t('admin.table.delete_confirm'), :class => "delete_link"
             links
           end
         end

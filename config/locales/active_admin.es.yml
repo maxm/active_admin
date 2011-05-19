@@ -15,4 +15,15 @@ es:
       details_title: Detalles de %{name}
     devise:
       login_title: Ingreso %{name}
-
+    header:
+      logout_link: Salir
+    actions:
+      new: Nuevo %{name}
+      edit: Editar %{name}
+      delete: Eliminar %{name}
+    table:
+      actions:
+        view: Ver
+        edit: Editar
+        delete: Eliminar
+      delete_confirm: ¿Está seguro que quiere eliminar esto?
