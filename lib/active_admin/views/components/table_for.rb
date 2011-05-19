@@ -16,6 +16,9 @@ module ActiveAdmin
       end
 
       def column(*args, &block)
+        options = args.last.is_a?(::Hash) ? args.last : {}
+        args << options if options != args.last
+        options.merge! :model => @collection.first.class if @collection.first
         col = Column.new(*args, &block)
         @columns << col
 
@@ -159,7 +162,11 @@ module ActiveAdmin
         private
 
         def pretty_title(raw)
-          raw.is_a?(Symbol) ? raw.to_s.titleize : raw
+          if raw.is_a?(Symbol)
+            @options[:model]? @options[:model].human_attribute_name(raw) : raw.to_s.titleize
+          else
+            raw
+          end
         end
 
         def default_options
